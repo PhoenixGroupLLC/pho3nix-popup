@@ -1,0 +1,35 @@
+{
+  "entrypoint": "src/pho3nix-popup.js",
+  "shell": "src/pho3nix-popup.js",
+  "fragments": [],
+  "sources": [
+    "src/pho3nix-popup.js",
+    "src/pho3nix-popup.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "name": "esm-bundled",
+      "browserCapabilities": [
+        "es2015",
+        "modules"
+      ],
+      "js": {
+        "minify": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true
+    }
+  ],
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}
