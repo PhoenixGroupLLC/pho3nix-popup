@@ -1,12 +1,12 @@
 {
-  "name": "pho3nix-element",
+  "name": "pho3nix-popup",
   "version": "1.0.0",
   "contributors": [
     "Phoenix Group LLC"
   ],
-  "main": "build/esm-bundled/src/pho3nix-element.js",
+  "main": "build/esm-bundled/src/pho3nix-popup.js",
   "license": "BSD-3-Clause",
-  "repository": "PhoenixGroup/pho3nix-element",
+  "repository": "PhoenixGroup/pho3nix-popup",
   "scripts": {
     "start": "gulp serve",
     "build": "tsc && polymer build",

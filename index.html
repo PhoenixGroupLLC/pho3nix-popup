@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pho3nix-Element</title>
+    <title>pho3nix-popup</title>
     <style>
       body {
         margin: 0;
@@ -12,23 +12,40 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background: #555;
       }
-      pho3nix-element {
-        --bg-color: white;
+      #open {
+        border: 1px solid red;
+        border-radius: 3px;
+        padding: 1em 2em;
+        align-self: center;
+        margin-top: 2em;
+        transition: all 300ms ease;
+        cursor: pointer;
+      }
+      #open:hover {
+        background: #f00;
+        color: white;
+      }
+      pho3nix-popup {
+        --bg-color: linear-gradient(to bottom, #ff7b0d 0%,#ffa84c 100%);
+        --popup-bg-color: hsl(31, 100%, 95%);
       }
     </style>
   </head>
   <body>
-    <pho3nix-element></pho3nix-element>
+    <a id="open"> Open popup </a>
+    <pho3nix-popup title="pho3nix-popup example"></pho3nix-popup>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module">
-      import '/src/pho3nix-element.js';
-      // import '/build/esm-bundled/src/pho3nix-element.js'
+      import '/src/pho3nix-popup.js';
+      const openBtn = document.querySelector('#open');
+      const popup = document.querySelector('pho3nix-popup');
+      openBtn.addEventListener('click', popup.open.bind(popup));
+      // import '/build/esm-bundled/src/pho3nix-popup.js'
     </script>
   </body>
 </html>

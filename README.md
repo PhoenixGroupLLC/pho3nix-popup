@@ -2,12 +2,13 @@
 
 > ## 🛠 Status: Done
 
-# Pho3nix-element
+# Pho3nix-popup
 
-Boilerplate for lit-element development
-
+Simple popup based on lit-element.
 ## Example:
 
 ```HTML
-    <pho3nix-element></pho3nix-element>
+    <pho3nix-popup title="String" [@close]>
+        <p> Slotted content </p>
+    </pho3nix-popup>
 ```
